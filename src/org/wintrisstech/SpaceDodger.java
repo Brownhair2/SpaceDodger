@@ -60,6 +60,48 @@ public class SpaceDodger extends JComponent implements ActionListener, MouseList
             }
         }
         if (wave == 2) {
+            aliens = new Alien[10];
+            for (int i = 0; i < aliens.length; i++) {
+                aliens[i] = new SpaceGoo();
+            }
+        }
+        if (wave == 3) {
+            aliens = new Alien[40];
+            for (int i = 0; i < aliens.length; i++) {
+                if (i%2 == 0) {
+                    aliens[i] = new SpaceGoo();
+                }
+                else
+                {
+                    aliens[i] = new PlainAlien2();
+                }
+            }
+        }
+        if (wave == 4) {
+            aliens = new Alien[10];
+            for (int i = 0; i < aliens.length; i++) {
+                aliens[i] = new SuperGoo();
+            }
+        }
+        if (wave == 5) {
+            aliens = new Alien[30];
+            for (int i = 0; i < aliens.length; i++) {
+                if (i%2 == 0) {
+                    aliens[i] = new SuperGoo();
+                }
+                else
+                {
+                    aliens[i] = new PlainAlien2();
+                }
+            }
+        }
+        if (wave == 6) {
+            aliens = new Alien[15];
+            for (int i = 0; i < aliens.length; i++) {
+                aliens[i] = new UltraGoo();
+            }
+        }
+        if (wave == 7) {
             gameWon = true;
         }
     }
